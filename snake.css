@@ -1,0 +1,162 @@
+@font-face {
+    font-family: pixel_operator;
+    src: url("PixelOperator8-Bold.ttf");
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    font-family: pixel_operator;
+}
+
+.speed-container {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 0px grey;
+}
+
+.speed-container > input {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.label {
+    margin: 10px;
+}
+
+.speed-container input[type="radio"]:checked + label {
+    border: 2px solid white;
+    padding: 5px;
+}
+
+.game-overlay {
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: 3.5rem;
+    text-shadow: 5px 5px 0px grey;
+    width: 500px;
+    height: 300px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 5px solid white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.game-overlay.show {
+    display: flex;
+    z-index: 100;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-shadow: 2px 2px 0px grey;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+#restart {
+    font-size: 1.5rem;
+    font-family: pixel_operator;
+}
+.pause.show {
+    display: flex;
+    z-index: 200;
+}
+.pause {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-shadow: 2px 2px 0px grey;
+    font-size: 1.5rem;
+}
+
+#game-area {
+    position: absolute;
+    background-color: rgb(66, 60, 83);
+    width: 750px;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#snake-container > div {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background-color: lawngreen;
+    border: 2px solid black;
+    z-index: 2;
+}
+
+.shrink {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+}
+
+#snake-start {
+    top: 375px;
+    left: 375px;
+}
+
+.food {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    top: 0px;
+    left: 0px;
+    border: 2px solid black;
+    background-color: magenta;
+}
+
+.score-container {
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    width: 15rem;
+    height: 20rem;
+    transform: translateX(-500px);
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.score-container > span {
+    color: white;
+    padding: 1rem;
+}
+
+#score,
+#high-score {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+}
