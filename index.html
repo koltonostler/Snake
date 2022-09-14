@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Snake Game</title>
-        <link rel="stylesheet" href="snake.css" />
-    </head>
-    <body>
-        <div class="pause">
-            <span>PAUSED</span>
-        </div>
-        <div class="score-container">
-            <span>SCORE:</span>
-            <span id="score"></span>
-            <span>HIGH SCORE:</span>
-            <span id="high-score"></span>
-        </div>
-        <div id="game-area">
-            <div class="game-overlay show">
-                <span id="game-over">SNAKE GAME</span>
-                <div class="speed-container">
-                    <div style="margin-bottom: 10px">SPEED:</div>
-                    <input type="radio" id="speed-1" value="200" name="speed-select" />
-                    <label class="label" for="speed-1">1</label>
-                    <input type="radio" id="speed-2" value="150" name="speed-select" />
-                    <label class="label" for="speed-2">2</label>
-                    <input type="radio" id="speed-3" value="100" name="speed-select" checked />
-                    <label class="label" for="speed-3">3</label>
-                    <input type="radio" id="speed-4" value="75" name="speed-select" />
-                    <label class="label" for="speed-4">4</label>
-                    <input type="radio" id="speed-5" value="50" name="speed-select" />
-                    <label class="label" for="speed-5">5</label>
-                </div>
-                <button id="restart" onclick="startGame()">START</button>
-            </div>
-            <div class="shrink-container"></div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Snake Game</title>
+		<link rel="preload" href="PixelOperator8-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+		<link rel="stylesheet" href="snake.css" />
+	</head>
+	<body>
+		<div class="pause">
+			<span>PAUSED</span>
+		</div>
+		<div class="score-container">
+			<span>SCORE:</span>
+			<span id="score"></span>
+			<span>HIGH SCORE:</span>
+			<span id="high-score"></span>
+		</div>
+		<div id="game-area">
+			<div class="game-overlay show">
+				<span id="game-over">SNAKE GAME</span>
+				<div class="speed-container">
+					<div style="margin-bottom: 10px">SPEED:</div>
+					<input type="radio" id="speed-1" value="200" name="speed-select" />
+					<label class="label" for="speed-1">1</label>
+					<input type="radio" id="speed-2" value="150" name="speed-select" />
+					<label class="label" for="speed-2">2</label>
+					<input type="radio" id="speed-3" value="100" name="speed-select" checked />
+					<label class="label" for="speed-3">3</label>
+					<input type="radio" id="speed-4" value="75" name="speed-select" />
+					<label class="label" for="speed-4">4</label>
+					<input type="radio" id="speed-5" value="50" name="speed-select" />
+					<label class="label" for="speed-5">5</label>
+				</div>
+				<button id="restart" onclick="startGame()">START</button>
+			</div>
+			<div class="shrink-container"></div>
 
-            <div id="snake-container">
-                <div class="snake-body" id="snake-start"></div>
-            </div>
-            <div id="food-container"></div>
-        </div>
+			<div id="snake-container">
+				<div class="snake-body" id="snake-start"></div>
+			</div>
+			<div id="food-container"></div>
+		</div>
 
-        <script src="script.js"></script>
-    </body>
+		<script src="script.js"></script>
+	</body>
 </html>
